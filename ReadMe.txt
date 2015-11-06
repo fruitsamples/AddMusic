@@ -3,17 +3,17 @@ AddMusic
 =========================================================================
 DESCRIPTION:
 
-AddMusic demonstrates basic use of iPod library access, part of the Media Player framework. You use iPod library access to play songs, audio books, and audio podcasts that are synced from a user's desktop iTunes library. This sample uses the Media Player framework's built-in user interface for choosing music.
+AddMusic demonstrates basic use of iPod library access, part of the Media Player framework. Use iPod library access to play songs, audio books, and audio podcasts that are synced from a user's desktop iTunes library. This sample uses the Media Player framework's built-in user interface for choosing music.
 
-AddMusic also demonstrates how to mix application audio with iPod library audio. The sample includes code for configuring application audio behavior using the AVAudioSession class and Audio Session Services.
+AddMusic also demonstrates how to mix application audio with iPod library audio. The sample includes code that configures application audio behavior using the AVAudioSession class and Audio Session Services.
 
 The sample's Settings bundle lets you configure one runtime option using the built-in Settings application. You can specify that AddMusic use the iPod music player, which shares state with the built-in iPod application; or the application music player, whose state is independent of the built-in iPod application.
 
-Code in the sample handles audio interruptions and audio hardware route changes for application audio. The Media Player framework handles these things automatically for sounds played using iPod library access.
+The sample includes code to handle interruptions and audio hardware route changes for application audio. The system handles these things automatically for sounds played by the application using iPod library access.
 
-To test audio interruption behavior, use the built-in Clock application. Set an alarm that will sound during playback. When the alarm sounds, dismiss it.
+To test interruption behavior, use the built-in Clock application. Set an alarm that will sound during playback. At the time the alarm will sound, ensure that iPod audio or application audio (or both) is playing, depending on which behavior you want to test. When the alarm sounds, dismiss it.
 
-To test audio hardware route change behavior, plug in or unplug a headset during playback. There's an alert that appears only when application audio is playing and you unplug the headset.
+To test audio hardware route change behavior, plug in or unplug a headset during playback. There's an alert that appears only when application audio is playing and you unplug the headset. When only iPod audio is playing and you unplug the headset, the system pauses iPod playback.
 
 The sample is internationalized. See the Localized.strings file in the project's Resources/en.lproj folder.
 
@@ -37,11 +37,11 @@ AddMusic does not demonstrate how to perform media queries.
 =========================================================================
 RELATED INFORMATION:
 
-iPod Library Access Guide, June 2009
-Media Player Framework Reference, June 2009
+iPod Library Access Guide, September 2009
+Media Player Framework Reference, September 2009
 Core Audio Overview, November 2008
-Audio Session Programming Guide, November 2008
-AV Foundation Framework Reference, March 2009
+Audio Session Programming Guide, September 2009
+AV Foundation Framework Reference, September 2009
 
 
 =========================================================================
@@ -80,6 +80,10 @@ The MusicTableViewController class defines the controller object for a table tha
 
 =========================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 1.1.1. Minor changes.
+
+Version 1.1. Improved the audio hardware route change callback function. Improved text of ReadMe file.
 
 Version 1.0. First version.
 

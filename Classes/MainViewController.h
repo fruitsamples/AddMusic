@@ -2,7 +2,7 @@
     File: MainViewController.h
 Abstract: View controller class for AddMusic. Sets up user interface, responds 
 to and manages user interaction.
- Version: 1.0
+ Version: 1.1
 
 Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
 Inc. ("Apple") in consideration of your agreement to the following
